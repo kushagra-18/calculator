@@ -64,6 +64,6 @@ def fact(x, y):
             err.append("7. <<Very long number.")
         else:
             err.append("12. <<Very long number.")
-
+print("Calculator 1.2 (319) by Metrier")
 s=[1,1]
 vvod()
