@@ -1,18 +1,24 @@
-#Programm for Termux!
-#For sololearn's inhabitans:
-#you must enter numbers like this:
-#4
-#2
-#but if you enter after the numbers any key, but not "y", the program will close without error.
 err=["Included calculations:"]
-def ent():
-    x=input()
-    if x == "y":
+def main():
+    print('---------\nMain menu\n---------')
+    print('1 - Arithmetic operations')
+    print('2 - Square root formula')
+    print('e - for exit')
+    m=input('Enter a character from the suggested: ')
+    if m == '1':
         vvod()
-    else:
+    if m == '2':
+        d(float(input('a = ')), float(input('b = ')), float(input('c = ')))
+    if m == 'e':
         exit
+        exit
+        exit
+        exit
+    else:
+        print('Please,enter a character from the suggested.')
+        main()
 def vvod():
-    s[0]=input("Enter first number or \"err\" for view a errors in this session: ")
+    s[0]=(input("Enter first number or \"err\" for view a errors in this session: "))
     if s[0] == "err":
         for i in range(len(err)):
             print(err[i])
@@ -24,14 +30,8 @@ def vvod():
     except ValueError:
         print("Value error! Enter a NUMBER.")
         vvod()
-    if s[0] == 0 or s[1] == 0:
-        print("\nPlease exclude zero.")
-        vvod()
-    else:
-        print("\nAnswers:")
-        nums(s[0], s[1])
-    print("-----------------------------------------------\nFor exit from calculator press CTRL+D or CTRL+c\n-----------------------------------------------")
-    vvod()
+    nums(s[0], s[1])
+    main()
 def nums(x, y):
     print("1.",x,"+",y,"=",x+y)
     print("2.",x,"-",y,"=",x-y)
@@ -64,6 +64,12 @@ def fact(x, y):
             err.append("7. <<Very long number.")
         else:
             err.append("12. <<Very long number.")
-print("Calculator 1.2 (319) by Metrier")
-s=[1,1]
-vvod()
+print('Calculator 1.3 (504) by Metrier')
+def d(x, y, z):
+    print("(",x,")x^2 + (",y,")x + (",z,") = 0")
+    D=(y**2)-(4*x*z)
+    print((-1*y+D**(1/2))/2)
+    print((-1*y-D**(1/2))/2)
+    main()
+s=[1, 1, 1]
+main()
