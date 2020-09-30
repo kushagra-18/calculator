@@ -1,8 +1,8 @@
 err=["Included calculations:"]
 def main():
     print('---------\nMain menu\n---------')
-    print('1 - Arithmetic operations')
-    print('2 - Square root formula')
+    print('1 - Arithmetic Operations')
+    print('2 - Square Root Formula')
     print('e - for exit')
     m=input('Enter a character from the suggested: ')
     if m == '1':
